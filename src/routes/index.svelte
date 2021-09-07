@@ -1,12 +1,19 @@
 <script>
   import Button from '$lib/Button.svelte';
+  import ButtonWithLayer from '$lib/ButtonWithLayer.svelte';
   import ButtonFromApp from '$lib/ButtonFromApp.svelte';
 </script>
 
-<Button class="bg-indigo-500">Styles from component (overriding class - failed)</Button>
-<ButtonFromApp class="bg-indigo-500">Styles from app.postcss (overriding class - ok)</ButtonFromApp>
+<h1>Using apply from a Svelte component and being able to override it</h1>
 
-<div class="w-full border my-2"/>
+<h2>Overriding class via the class prop</h2>
 
-<Button sucess>Styles from component (custom prop - failed)</Button>
-<ButtonFromApp success>Styles from app.postcss (custom prop - ok)</ButtonFromApp>
+<Button class="bg-indigo-500">Styles from component (FAILS!)</Button>
+<ButtonWithLayer class="bg-indigo-500">Styles from component with layer (FAILS!)</ButtonWithLayer>
+<ButtonFromApp class="bg-indigo-500">Styles from app.postcss (OK!)</ButtonFromApp>
+
+<h2>Overriding class via a custom class</h2>
+
+<Button sucess>Styles from component (FAILS!)</Button>
+<ButtonWithLayer sucess>Styles from component (FAILS!)</ButtonWithLayer>
+<ButtonFromApp success>Styles from app.postcss (OK!)</ButtonFromApp>
