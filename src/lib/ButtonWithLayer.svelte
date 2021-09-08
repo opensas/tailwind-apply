@@ -1,4 +1,4 @@
-<!-- CustomButton.svelte -->
+<!-- ButtonWithLayer.svelte -->
 <script>
   let className = '';
   export { className as class };
